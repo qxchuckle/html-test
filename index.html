@@ -1,0 +1,38 @@
+<!doctype html>
+  <html>
+
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="referrer" content="no-referrer">
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+    <script>
+        if ('serviceWorker' in navigator) {
+        if (Number(window.localStorage.getItem('ChuckleSet')) < 1) {
+          (async()=>{window.stop()})()
+          window.localStorage.setItem('ChuckleSet', 1)
+        }
+        navigator.serviceWorker.register('/giggles.js')
+          .then(async () => {
+            if (Number(window.localStorage.getItem('ChuckleSet')) < 2) {
+              window.localStorage.setItem('ChuckleSet', 2)
+              setTimeout(() => {
+                window.location.reload()
+              }, 150)
+            }
+          })
+        }
+    </script>
+    <link rel="preconnect" href="https://s1.hdslb.com/" />
+    <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="all" onload="this.media='all'" />
+    <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="all" onload="this.media='all'" />
+    <link rel="stylesheet" href="/main.css">
+    <title>没有title</title>
+  </head>
+  <body>
+    <h1></h1>
+    
+</body>
+
+</html>
