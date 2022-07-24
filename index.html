@@ -4,35 +4,68 @@
   <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width initial-scale=1'>
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
     <meta name="referrer" content="no-referrer">
     <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-    <script>
-        if ('serviceWorker' in navigator) {
-        if (Number(window.localStorage.getItem('ChuckleSet')) < 1) {
-          (async()=>{window.stop()})()
-          window.localStorage.setItem('ChuckleSet', 1)
-        }
-        navigator.serviceWorker.register('/giggles.js')
-          .then(async () => {
-            if (Number(window.localStorage.getItem('ChuckleSet')) < 2) {
-              window.localStorage.setItem('ChuckleSet', 2)
-              setTimeout(() => {
-                window.location.reload()
-              }, 150)
-            }
-          })
-        }
-    </script>
     <link rel="preconnect" href="https://s1.hdslb.com/" />
     <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/regular.css" media="all" onload="this.media='all'" />
     <link rel="stylesheet" href="//s1.hdslb.com/bfs/static/jinkela/long/font/medium.css" media="all" onload="this.media='all'" />
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="main.css">
     <title>没有title</title>
   </head>
   <body>
-    <h1></h1>
-    
+    <header class="header" id="header">
+      <div class="header-menu">
+          <div class="site-name">
+              <a href="/" id="site-name-item">Chuckle的SW测试站</a>
+          </div>
+          <div class="site-menus">
+              <ul>
+                  <li>
+                      <a href="/">主页</a>
+                  </li>
+              </ul>
+              <ul>
+                  <li>
+                      <a href="/">博客</a>
+                  </li>
+              </ul>
+              <ul>
+                  <li>
+                      <a href="/">没什么用的分栏</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </header>
+    <div class="content">
+      <div class="avatar">
+        <img src="gavatar.webp" alt="avatar">
+      </div>
+      <div class="author">轻笑Chuckle</div>
+      <div class="descr">| Another branch will grow and flourish in the future |</div>
+      <div class="social">
+        <a target="_blank" rel="noopener noreferrer" href="/">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-github"></use>
+            </svg>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="mailto:1934009145@qq.com">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-youjian"></use>
+            </svg>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="/">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-dushu"></use>
+            </svg>
+        </a>
+        </div>
+    </div>
+    <footer class="footer" id="footer">
+      Copyright © since 2022 轻笑Chuckle All Rights Reserved
+      <a class="beian" style="color:#000;" href="http://www.beian.gov.cn/"target="_blank">粤ICP备2022076449号</a>
+  </footer>
+  <script defer src="iconfont.js"></script>
 </body>
-
 </html>
